@@ -1,0 +1,50 @@
+﻿<Window x:Class="Tetris.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetris"
+        mc:Ignorable="d"
+        Title="Tetris" Height="680" Width="550" ResizeMode="NoResize" KeyUp="Controls_KeyUp" KeyDown="Controls_KeyDown" Icon="Resources/video-game.png">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="NewGameBtn_Click"/>
+                <MenuItem Header="_Save As" Click="SaveGameBtn_Click"/>
+                <MenuItem Header="_Load" Click="LoadGameBtn_Click"/>
+                <Separator/>
+                <MenuItem Header="_Exit" Click="ExitBtn_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Game">
+                <MenuItem x:Name="startBtn" Header="_Start" Click="StartBtn_Click"/>
+                <Separator/>
+                <MenuItem x:Name="pauseBtn" Header="_Pause" Click="PauseBtn_Click"/>
+                <MenuItem x:Name="resumeBtn" Header="_Resume" Click="ResumeBtn_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="AboutBtn_Click"/>
+                <MenuItem Header="_Controls" Click="ControlsBtn_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Canvas x:Name="gameBoardView" Width="350" MinHeight="630" MaxHeight="630">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="Resources/ww.jpg" Stretch="UniformToFill"/>
+                </Canvas.Background>
+            </Canvas>
+            <StackPanel Width="200" Height="630" Background="Black">
+                <TextBlock HorizontalAlignment="Center" Margin="0, 10, 0, 10" Foreground="White" FontSize="16">Next Block</TextBlock>
+                <Canvas x:Name="nextBlockCanvas" Height="150" Width=" 150"/>
+                <TextBlock HorizontalAlignment="Center" Margin="0, 10, 15, 0" Foreground="White" FontSize="16">Level</TextBlock>
+                <Label x:Name="levelLabel" HorizontalAlignment="Center" Margin="0, 0, 15, 10" Foreground="PaleGreen"></Label>
+                <TextBlock HorizontalAlignment="Center" Margin="0, 10, 15, 0" Foreground="White" FontSize="16">Score</TextBlock>
+                <Label x:Name="scoreLabel" HorizontalAlignment="Center" Margin="0, 0, 15, 10" Foreground="DeepSkyBlue"></Label>
+                <TextBlock HorizontalAlignment="Center" Margin="0, 10, 15, 0" Foreground="White" FontSize="16">Lines</TextBlock>
+                <Label x:Name="lineLabel" HorizontalAlignment="Center" Margin="0, 0, 15, 10" Foreground="LightSeaGreen"></Label>
+                <Label x:Name="pauseLabel" HorizontalAlignment="Center" Margin="0, 10, 15, 0" Foreground="Coral"></Label>
+                <Label x:Name="gameOverLabel" HorizontalAlignment="Center" Margin="0, 10, 15, 0" Foreground="Red"></Label>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>

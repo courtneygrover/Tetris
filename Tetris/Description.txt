@@ -1,0 +1,21 @@
+Name: Courtney Grover
+Worked with: Bragdon Bester
+
+Project: Tetris
+
+Extra credit:
+
+-Theme
+   >Background, colors
+-Sounds
+   >Different sounds for when 1 row vs 2 rows vs 3 vs 4 rows are completed
+   >Sound when game is lost
+   >Sound when level up
+   >Sound when blocks hit something
+
+Shortcomings:
+
+-Definitely not the most efficient solution. For example, we re-draw the entire board quite often.
+-Sound when blocks hit seems to lag.
+-Sometimes when up arrow is pressed, blocks shift up rather than rotate???
+-Rotation also is not very user friendly to me; hard to get used to

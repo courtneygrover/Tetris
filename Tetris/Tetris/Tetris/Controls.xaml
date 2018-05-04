@@ -1,0 +1,38 @@
+﻿<Window x:Class="Tetris.Controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetris"
+        mc:Ignorable="d"
+        Title="Controls" Height="353" Width="350" Icon="Resources/video-game.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"></RowDefinition>
+            <RowDefinition Height="53*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Margin="5, 5, 5, 5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Source="Resources/video-game.png"></Image>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" FontSize="36" Height="44" Margin="12.667,6,12.667,10" Width="122">TETRIS</TextBlock>
+        <TextBlock Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" FontFamily="Calibri" xml:space="preserve">Shortcuts:
+    S: Start the game
+    N: New game
+            
+Controls:
+    P: Pause the game
+    R: Unpause the game
+    Right Arrow: Shift current block right
+    Left Arrow: Shift current block left
+    Up Arrow: Rotate current block clock-wise
+    Down Arrow: Shift the current block down
+    SpaceBar: Drop current block as far as possible
+            
+Cheats:
+    H: Increment current level by one
+        </TextBlock>
+    </Grid>
+</Window>
